@@ -1,0 +1,2 @@
+[2019-07-18 18:33:03.179] [renderer1] [error] Error: [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/home/ghost/react-project-2.0/.vscode'
+[2019-07-18 18:33:03.180] [renderer1] [error] [File Watcher (node.js)] Error: ENOENT: no such file or directory, stat '/home/ghost/react-project-2.0/.vscode'

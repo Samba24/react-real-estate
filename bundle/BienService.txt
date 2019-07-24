@@ -1,0 +1,27 @@
+import axios from "axios";
+import stable from "../const";
+import  {BienFormData} from "../utils/formData";
+import serializeObject from "../utils/Serializer";
+
+class BienService{
+    constructor(){}
+    add(bien){
+        delete(bien.modal);
+        delete(bien.id);
+        return axios.post(`${stable.API_URL}/${BienFormData.addUrl}&${serializeObject(bien)}`,bien);
+    }
+
+    edit(bien){
+        delete(bien.modal);
+        serializeObject(bien);
+        return axios.post(`${stable.API_URL}/${BienFormData.editUrl}&${serializeObject(bien)}`,bien);
+    }
+    delete(bien){
+        delete(bien.modal);
+        serializeObject(bien);
+        return axios.delete(`${stable.API_URL}/${BienFormData.deleteUrl}&${serializeObject(bien)}`,bien);
+    }
+
+}
+
+export default BienService

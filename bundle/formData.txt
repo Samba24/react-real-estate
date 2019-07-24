@@ -1,0 +1,80 @@
+var BienFormData = {
+    libelle  : {
+        type : "text",
+        placeholder : "Libellé",
+        required: true
+    },
+    prix     : {
+        type : "text",
+        placeholder : "Prix",
+        required: true
+    },
+    bailleur : {
+        type : "select",
+        placeholder : "Bailleur",
+        required: true,
+        data : []
+    },
+    adresse  : {
+        type : "text",
+        placeholder : "Adresse",
+        required: true
+    },
+    description : {
+        type : "textarea",
+        placeholder : "Description"
+    },
+    addUrl: "Bien?action=add",
+    editUrl: "Bien?action=edit",
+    deleteUrl: "Bien?action=delete"
+}
+var LocationFormData = {
+    client  : {
+        placeholder : "Client",
+        type : "select",
+        required: true,
+        data : [] 
+    },
+    bien     : {
+        placeholder : "Bien",
+        type : "select",
+        required: true,
+        data : [] 
+    },
+    addUrl: "location/add",
+    editUrl: "location/edit",
+    deleteUrl: "location/delete"
+}
+var BailleurFormData = {
+    nom : {
+        placeholder : "Nom",
+        required : true,
+        type : 'text'
+    },
+    prenom : {
+        placeholder : "Prénom",
+        required : true,
+        type : 'text'
+    },
+    adresse : {
+        placeholder : "Adresse",
+        required : true,
+        type : 'text'
+    },
+    telephone : {
+        placeholder : "Téléphone",
+        required : true,
+        type : 'text'
+    },
+    addUrl: "bailleur/add",
+    editUrl: "bailleur/edit",
+    deleteUrl: "bailleur/delete"
+
+}
+export{
+    BienFormData,
+    LocationFormData,
+    BailleurFormData
+}
+
+// export default data = BienFormData,LocationFormData;

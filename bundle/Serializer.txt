@@ -1,0 +1,11 @@
+function serializeObject(object) { 
+    let output = ""; 
+    let value; 
+    Object.keys(object).forEach((key, index) => { 
+        value = eval(`object.${key}`); 
+        index == 0 ? output += `${key}=${value}` : output += `&${key}=${value}` ; 
+    }); 
+    return output; 
+}
+
+export default serializeObject;
